@@ -1,0 +1,18 @@
+
+<select [(ngModel)]="teamSelected" class="selectBtn" (change)="handleChange($event)">
+<option *ngFor="let option of options" [value]="option.id" >{{option.full_name}}</option></select>   
+
+<button (click)="showCard = !showCard; AddCard()" class="trackBtn">Track Team</button>
+
+
+
+<div *ngFor=" let option of _options">
+  <app-card [cardData]="option">
+   
+  </app-card>
+
+  <!-- <div>{{option.id}}</div> -->
+</div>
+
+
+

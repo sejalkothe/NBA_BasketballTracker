@@ -1,0 +1,13 @@
+<ng-container *ngIf="!closed" >
+<div class="card"  [id]="cardData.id" >
+  <div class="header">
+    <h2>{{cardData.full_name}} <span>[{{cardData.abbreviation}}]</span> </h2>
+    <button (click)="closeCard()" class="closeBtn"><mat-icon class="close">close</mat-icon>
+    </button>
+  </div>
+    <h4>{{cardData.conference}} conference</h4>
+    <hr/>
+  </div>
+</ng-container>
+  
+
