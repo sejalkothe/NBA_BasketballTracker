@@ -42,3 +42,9 @@
 button:hover{
   background-color: rgb(98, 98, 233);
 }
+
+.card-container{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}

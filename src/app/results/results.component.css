@@ -1,0 +1,32 @@
+.container{
+   background-color:  #dfdfdf;
+   width: 350px;
+   height: 400px;
+   margin-top: 20px;
+   margin-left: 20px;
+   border-radius: 4px;
+}
+
+.heading{
+   font-size: 20px;
+   padding-top: 15px;
+   margin-left: 10px;
+}
+
+.conference{
+    margin-left: 10px;
+}
+
+.backBtn{
+    background-color: green;
+    color: white;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 4px;
+
+}
+
+.backBtn:hover{
+    background-color: rgb(33, 90, 33);
+    color: white;
+}

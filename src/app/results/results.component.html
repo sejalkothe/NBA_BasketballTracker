@@ -1,0 +1,19 @@
+<div class="container" *ngIf="teamDetails">
+    <div class="header">
+      <p class="heading">{{teamDetails.name}} [{{teamDetails.abbreviation}}]</p>
+    </div>
+    <p class="conference">{{teamDetails.conference}} conference</p>
+   <hr/>
+    <div>
+      <div>
+        <p style="margin-left: 10px; font-size: 20px; margin-top: 15px;">Score of last 12 days</p>
+        <p style="margin-left: 10px; padding-top: 10px;" *ngFor="let result of teamDetails.scores">
+          <span style="font-size: 19px;"><b>{{result.selectedTeam}}</b></span>
+          <span style="font-size: 17px; margin-left: 10px;">{{result.selectedTeamScore}}</span> -
+          <span style="font-size: 17px; margin-right: 10px;">{{result.opponentTeamScore}}</span>
+          <span style="font-size: 19px;"><b>{{result.opponentTeam}}</b></span>
+        </p>
+        <button style="margin-left: 10px; margin-top: 15px;" class="backBtn" (click)="backToTeams()"> << Back to all team stats</button>
+      </div>
+    </div>
+  </div>

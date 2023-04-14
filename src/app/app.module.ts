@@ -15,12 +15,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { DropdownService } from './dropdown.service';
 import { CardComponent } from './card/card.component';
 import { MatIconModule } from '@angular/material/icon';
+import { ResultsComponent } from './results/results.component';
+import { RouterModule, Routes } from '@angular/router';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CardComponent
+    CardComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,

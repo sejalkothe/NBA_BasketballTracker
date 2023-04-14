@@ -1,13 +1,36 @@
-<ng-container *ngIf="!closed" >
-<div class="card"  [id]="cardData.id" >
-  <div class="header">
-    <h2>{{cardData.full_name}} <span>[{{cardData.abbreviation}}]</span> </h2>
-    <button (click)="closeCard()" class="closeBtn"><mat-icon class="close">close</mat-icon>
-    </button>
-  </div>
-    <h4>{{cardData.conference}} conference</h4>
-    <hr/>
-  </div>
-</ng-container>
-  
+<div *ngIf="teamDetails">
+  <ng-container>
+    <div class="card">
+      <div class="header">
+        <h2>
+          {{ teamDetails.name }} <span>[{{ teamDetails.abbreviation }}]</span>
+        </h2>
+        <button (click)="deleteCard()" class="closeBtn">
+          <mat-icon class="close">close</mat-icon>
+        </button>
+      </div>
+      <h4>{{ teamDetails.conference }} conference</h4>
+      <hr style="background-color: rgb(207, 196, 196); height: 1px; width: 400px; margin-top: -5px;" />
 
+
+      <p style="padding-left: 11px; margin-top: 5px;">Result of last 12 days</p>
+      <div class="resultList">
+        <p
+          *ngFor="let result of teamDetails.results"
+          [ngClass]="result === 'W' ? 'bg-green' : 'bg-red'"
+        >
+          {{ result }}
+        </p>
+      </div>
+      
+      <p class="pts">Avg pts scored : {{ teamDetails.avgPtsScore }}</p>
+      <p class="pts">Avg pts conceded : {{ teamDetails.avgPtsConceded }}</p>
+      <div>
+        <button class="seeResultBtn"  (click)="seeResult()">
+          See game results >>
+        </button>
+      </div>
+      <img class="teamLogo" [src]="logo" alt="{{ teamDetails.abbreviation }}" />
+    </div>
+  </ng-container>
+</div>

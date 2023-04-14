@@ -1,10 +1,12 @@
 .card{
     background-color: rgb(178, 234, 223);
-    width: 400px;
-    height: 250px;
+    width: auto;
+    height: 300px;
     margin-top: 20px;
     margin-left: 20px;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
    
 }
 
@@ -23,14 +25,81 @@ h4{
 .header{
     display: flex;
     flex-direction: row;
+    justify-content: space-between; 
 }
+
+
+
+
 
 .close{
     margin-top: 15px;
     justify-content: flex-end; 
-    margin-left: 155px;
+    margin-left: 200px;
 }
 .closeBtn{
     background: none;
     border: none;
+}
+
+.bg-green{
+    background-color: green;
+    margin-right: 10px;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    border-radius: 12px;
+    color: white;
+   
+}
+
+.bg-red{
+    background-color: red;
+    margin-right: 10px;  
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    border-radius: 12px;
+    color: white;
+}
+
+.resultList{
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+}
+
+.pts{
+    padding-left: 11px;  
+}
+
+.seeResultBtn{
+    background-color:green;
+    color:white;
+    height: 45px;
+    margin-top: 5px;
+    margin-left: 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.seeResultBtn:hover{
+    background-color: rgb(34, 81, 2);
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+.teamLogo{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: flex-end;
+    margin-left: 240px;
+    margin-top: -160px;
+
 }
